@@ -1,0 +1,72 @@
+{
+  "Backend Developer": {
+    "skills": [
+      "JavaScript",
+      "Node.js",
+      "Express",
+      "REST APIs",
+      "SQL",
+      "NoSQL",
+      "Authentication",
+      "Testing",
+      "Deployment",
+      "Debugging"
+    ]
+  },
+  "Frontend Developer": {
+    "skills": [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "React",
+      "State Management",
+      "Responsive Design",
+      "Testing",
+      "Build Tools",
+      "Accessibility",
+      "Performance Optimization"
+    ]
+  },
+  "Full Stack Developer": {
+    "skills": [
+      "JavaScript",
+      "Node.js",
+      "Express",
+      "React",
+      "REST APIs",
+      "SQL",
+      "Deployment",
+      "Testing",
+      "Authentication",
+      "Debugging"
+    ]
+  },
+  "DevOps Engineer": {
+    "skills": [
+      "Linux",
+      "Docker",
+      "Kubernetes",
+      "CI/CD",
+      "Cloud (AWS/GCP/Azure)",
+      "Monitoring",
+      "Networking",
+      "Scripting",
+      "Infrastructure as Code",
+      "Security Basics"
+    ]
+  },
+  "Data Engineer": {
+    "skills": [
+      "SQL",
+      "ETL",
+      "Python",
+      "Data Warehousing",
+      "Big Data Tools",
+      "Streaming",
+      "Data Modeling",
+      "Database Design",
+      "Cloud Data Services",
+      "Testing"
+    ]
+  }
+}
