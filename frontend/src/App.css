@@ -1,0 +1,178 @@
+/* App.css - theme + spinner + responsive (replace existing file) */
+
+:root {
+  --bg: #f7faf8;
+  --card: #ffffff;
+  --muted: #666;
+  --accent: #2b6cb0;
+  --border: #e6e6e6;
+  --card-shadow: 0 6px 18px rgba(38,50,56,0.06);
+  --radius: 12px;
+}
+
+[data-theme="dark"] {
+  --bg: #0f1720;
+  --card: #0b1220;
+  --muted: #9aa3b2;
+  --accent: #60a5fa;
+  --border: #1f2933;
+  --card-shadow: 0 8px 24px rgba(2,6,23,0.6);
+  color: #e6eef6;
+}
+
+/* Global */
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Inter, Roboto, "Helvetica Neue", Arial, sans-serif;
+  background: var(--bg);
+  color: inherit;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Page container */
+.App {
+  max-width: 1100px;
+  margin: 22px auto;
+  padding: 18px;
+}
+
+/* Headline */
+.App h1 {
+  margin: 6px 0 18px;
+  font-size: 34px;
+  letter-spacing: -0.4px;
+}
+
+/* Card */
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--card-shadow);
+  padding: 18px;
+}
+
+/* Input form card */
+.input-card {
+  margin-bottom: 18px;
+}
+
+/* Two-column top layout */
+.top-row {
+  display: flex;
+  gap: 18px;
+  align-items: flex-start;
+}
+
+/* Left column expands */
+.left-col {
+  flex: 1;
+}
+
+/* Right column fixed width */
+.right-col {
+  width: 380px;
+}
+
+/* HackerNews full width card */
+.news-card {
+  margin-top: 18px;
+}
+
+/* Headings inside cards */
+.card h2, .card h3, .card h4 {
+  margin: 0 0 12px 0;
+}
+
+/* Recommendations list spacing */
+.card ul {
+  margin: 8px 0 0 18px;
+  line-height: 1.6;
+}
+
+/* Input controls */
+label { font-weight: 600; color: #222; display:block; }
+input[type="text"], select {
+  width: 100%;
+  padding: 10px 12px;
+  margin-top: 6px;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  background: #fff;
+  font-size: 14px;
+}
+
+/* Button */
+.btn {
+  display: inline-block;
+  background: var(--accent);
+  color: #fff;
+  padding: 8px 14px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  margin-top: 10px;
+  box-shadow: 0 6px 14px rgba(43,108,176,0.12);
+}
+.btn:disabled { opacity: 0.6; cursor: not-allowed; }
+
+/* Theme toggle */
+.theme-toggle {
+  float: right;
+  margin-top: -42px;
+}
+
+/* News list */
+.news-list { padding-left: 18px; }
+.news-item { margin-bottom: 14px; }
+.news-item a { color: var(--accent); font-weight: 600; text-decoration: none; }
+.news-meta { color: var(--muted); font-size: 13px; margin-top: 4px; }
+
+/* Spinner (inline) */
+.spinner {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  border: 3px solid rgba(255,255,255,0.25);
+  border-top-color: rgba(255,255,255,0.9);
+  animation: spin 0.9s linear infinite;
+  vertical-align: middle;
+  margin-left: 8px;
+}
+.spinner-dark {
+  border: 3px solid rgba(0,0,0,0.12);
+  border-top-color: rgba(0,0,0,0.6);
+}
+
+@keyframes spin { to { transform: rotate(360deg); } }
+
+/* Centered overlay spinner for big actions (optional) */
+.overlay {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(2,6,23,0.35);
+  z-index: 9999;
+}
+
+/* Small screens: stack layout */
+@media (max-width: 900px) {
+  .App { padding: 14px; }
+  .top-row { flex-direction: column; }
+  .right-col { width: 100%; }
+}
+
+/* Very small screens: tighten spacing */
+@media (max-width: 480px) {
+  .App h1 { font-size: 24px; }
+  input[type="text"], select { font-size: 13px; padding: 9px; }
+  .btn { padding: 8px 12px; }
+}
+
